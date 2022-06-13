@@ -1,0 +1,18 @@
+.navigation {
+  background-color: #303030;
+  padding: 12px 20px;
+
+  ul {
+    display: flex;
+  }
+
+  &-link {
+    padding: 4px 8px;
+    color: white;
+    text-decoration: none;
+
+    &--home {
+      font-weight: bold;
+    }
+  }
+}
