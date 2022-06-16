@@ -1,14 +1,27 @@
+import axios from "axios";
 import { useForm, FormProvider } from "react-hook-form";
+import { useMutation } from "react-query";
 import { Input } from "../Inputs/Input";
 
 export const AddAuthorForm = () => {
   const methods = useForm({ mode: "onTouched" });
-  const onSubmit = (data) => console.log(data);
+  const onFormSubmitSuccess = (data) => {
+    methods.reset();
+    console.log(data);
+  };
+  const { mutate: send, status } = useMutation(
+    (newAuthor) => {
+      return axios.post("/authors", newAuthor);
+    },
+    { onSuccess: onFormSubmitSuccess }
+  );
+  const onSubmit = (newAuthor) => {
+    send(newAuthor);
+  };
 
   return (
-    /* "handleSubmit" will validate your inputs before invoking "onSubmit" */
     <FormProvider {...methods}>
-      <form onSubmit={methods.handleSubmit(onSubmit)}>
+      <form onSubmit={methods.handleSubmit(onSubmit)} noValidate>
         <Input type="text" id="firstName" label="First Name" isRequired />
         <Input type="text" id="lastName" label="Last Name" isRequired />
         <Input type="text" id="company" label="Company" isRequired />
@@ -21,7 +34,14 @@ export const AddAuthorForm = () => {
           isRequired
         />
 
-        <button type="submit">submit</button>
+        <button type="submit">
+          submit{status === "loading" ? " ..." : ""}
+        </button>
+
+        {status === "success" && <p>Success!</p>}
+        {status === "error" && (
+          <p>Sorry, there was an error creating a new author.</p>
+        )}
       </form>
     </FormProvider>
   );

@@ -1,14 +1,19 @@
 import { Routes, Route } from "react-router-dom";
+import { QueryClient, QueryClientProvider } from "react-query";
 import { AddAuthor } from "./pages/AddAuthor";
-import "./App.scss";
 import { Home } from "./pages/Home";
+import "./App.scss";
+
+const queryClient = new QueryClient();
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path="add-new-author" element={<AddAuthor />} />
-    </Routes>
+    <QueryClientProvider client={queryClient}>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="add-new-author" element={<AddAuthor />} />
+      </Routes>
+    </QueryClientProvider>
   );
 }
 
