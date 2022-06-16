@@ -1,3 +1,9 @@
+import "./InputLabel.scss";
+
 export const InputLabel = ({ children, id }) => {
-  return <label htmlFor={id}>{children}</label>;
+  return (
+    <label className="form-label" htmlFor={id}>
+      {children}
+    </label>
+  );
 };

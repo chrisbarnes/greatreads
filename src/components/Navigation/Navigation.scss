@@ -1,6 +1,7 @@
 .navigation {
-  background-color: #303030;
+  margin-bottom: 40px;
   padding: 12px 20px;
+  background-color: #303030;
 
   ul {
     display: flex;
@@ -10,6 +11,10 @@
     padding: 4px 8px;
     color: white;
     text-decoration: none;
+
+    &:first-child {
+      padding-left: 0;
+    }
 
     &--home {
       font-weight: bold;

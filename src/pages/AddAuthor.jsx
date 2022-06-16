@@ -4,7 +4,10 @@ import { AddAuthorForm } from "../components/AddAuthorForm/AddAuthorForm";
 export const AddAuthor = () => {
   return (
     <Layout>
-      <AddAuthorForm />
+      <section className="container add-author">
+        <h1>Add an Author</h1>
+        <AddAuthorForm />
+      </section>
     </Layout>
   );
 };
