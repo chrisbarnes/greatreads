@@ -1,3 +1,5 @@
+@import "../../styles/variables.scss";
+
 .form-input-wrapper {
   position: relative;
 }
@@ -6,4 +8,8 @@
   width: 100%;
   padding: 20px 12px 20px;
   font-size: 16px;
+
+  &:focus {
+    outline-color: $light-steel-blue;
+  }
 }

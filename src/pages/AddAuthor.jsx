@@ -1,5 +1,6 @@
 import { Layout } from "../components/Layout/Layout";
 import { AddAuthorForm } from "../components/AddAuthorForm/AddAuthorForm";
+import "./AddAuthor.scss";
 
 export const AddAuthor = () => {
   return (

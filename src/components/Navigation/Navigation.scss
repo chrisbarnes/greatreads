@@ -1,23 +1,20 @@
+@import "../../styles/variables.scss";
+
 .navigation {
-  margin-bottom: 40px;
   padding: 12px 20px;
-  background-color: #303030;
+  background-color: $charcoal;
 
   ul {
     display: flex;
   }
 
   &-link {
-    padding: 4px 8px;
+    padding: 4px 14px;
     color: white;
     text-decoration: none;
 
     &:first-child {
       padding-left: 0;
-    }
-
-    &--home {
-      font-weight: bold;
     }
   }
 }

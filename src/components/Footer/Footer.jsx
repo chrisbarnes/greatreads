@@ -1,5 +1,14 @@
-import React from "react";
+import "./Footer.scss";
 
 export const Footer = () => {
-  return <div>Footer</div>;
+  return (
+    <footer className="footer">
+      <div className="container">
+        <h2>
+          <strong>Great</strong>Reads
+        </h2>
+        <p>Kind of like GoodReads, but Great.</p>
+      </div>
+    </footer>
+  );
 };

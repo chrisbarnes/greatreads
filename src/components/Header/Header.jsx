@@ -2,8 +2,8 @@ import { Navigation } from "../Navigation/Navigation";
 
 export const Header = () => {
   return (
-    <div>
+    <header>
       <Navigation />
-    </div>
+    </header>
   );
 };

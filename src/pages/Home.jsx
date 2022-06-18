@@ -1,5 +1,10 @@
 import { Layout } from "../components/Layout/Layout";
+import { Hero } from "../components/Hero/Hero";
 
 export const Home = () => {
-  return <Layout>Home</Layout>;
+  return (
+    <Layout>
+      <Hero />
+    </Layout>
+  );
 };

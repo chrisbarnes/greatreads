@@ -7,7 +7,7 @@ export const Navigation = () => {
       <ul className="container">
         <li>
           <Link className="navigation-link navigation-link--home" to="/">
-            Great Reads
+            <strong>Great</strong>Reads
           </Link>
         </li>
         <li>

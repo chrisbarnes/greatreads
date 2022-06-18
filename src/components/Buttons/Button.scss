@@ -1,10 +1,16 @@
+@import "../../styles/variables.scss";
+
 .button {
   padding: 12px 20px;
   text-transform: uppercase;
   font-weight: bold;
   font-size: 20px;
-  background-color: #000;
+  background-color: $cadet-blue;
   color: #fff;
   border: 0;
   cursor: pointer;
+
+  &:focus {
+    outline-color: $charcoal;
+  }
 }
