@@ -3,8 +3,12 @@
 .hero {
   display: flex;
   padding: 100px 60px;
-  min-height: 100vh;
+  min-height: 50vh;
   background-size: cover;
+
+  @media (min-width: 420px) {
+    min-height: 100vh;
+  }
 
   &-inner {
     display: flex;
@@ -15,6 +19,10 @@
   &-heading {
     font-weight: normal;
     color: $gainsboro;
-    font-size: 64px;
+    font-size: 32px;
+
+    @media (min-width: 420px) {
+      font-size: 64px;
+    }
   }
 }

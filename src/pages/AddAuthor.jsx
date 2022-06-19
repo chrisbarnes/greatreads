@@ -5,9 +5,11 @@ import "./AddAuthor.scss";
 export const AddAuthor = () => {
   return (
     <Layout>
-      <section className="container add-author">
-        <h1>Add an Author</h1>
-        <AddAuthorForm />
+      <section className="add-author">
+        <div className="container">
+          <h1>Add an Author</h1>
+          <AddAuthorForm />
+        </div>
       </section>
     </Layout>
   );
